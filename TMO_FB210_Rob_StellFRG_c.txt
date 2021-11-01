@@ -1,0 +1,186 @@
+/*
+ * TMO_FB210_Rob_StellFRG.c
+ *
+ *  Created on: Oct 8, 2021
+ *      Author: LENOVO
+ */
+
+#include <TMO_FB210_Rob_StellFRG.h>
+
+typedef struct
+	    {
+	        _Bool X1 : 1;
+	        _Bool X2 : 1;
+	        _Bool X3 : 1;
+	        _Bool X4 : 1;
+	        _Bool X5 : 1;
+	        _Bool X6 : 1;
+	        _Bool X7 : 1;
+	        _Bool X8 : 1;
+	    } u8bits;
+
+
+	    u8bits uint8_tToStructBool (uint8_t liczba)
+	    {
+	    	u8bits _CFG;
+
+	    	_CFG= *(u8bits *)&liczba;
+
+	    	return _CFG;
+	    };
+
+
+
+typedef struct {
+   bool FRG1;
+   bool FRG2;
+   bool FRG3;
+   bool FRG4;
+   bool FRG5;
+   bool FRG6;
+   bool FRG7;
+   bool FRG8;
+}VAR_OUTPUT;
+
+extern struct VAR_OUTPUT Rob_StellFRG(bool StellFrg1, bool StellFrg2, bool StellFrg3, bool StellFrg4,
+					bool StellFrg5, bool StellFrg6, bool StellFrg7, bool StellFrg8,
+					static uint8_t CFG)
+{
+
+	// Konwersja z uint8_t na strukture Bool
+	u8bits _CFG;
+	_CFG = uint8_tToStructBool(CFG);
+
+	// Porownanie n-ty bit
+
+	//Freigabe 1
+	VAR_OUTPUT.FRG1=StellFrg1 & _CFG.X1 ;
+	//Freigabe 2
+	VAR_OUTPUT.FRG2=StellFrg2 & _CFG.X2 ;
+	//Freigabe 3
+	VAR_OUTPUT.FRG3=StellFrg3 & _CFG.X3 ;
+	//Freigabe 4
+	VAR_OUTPUT.FRG4=StellFrg4 & _CFG.X4 ;
+	//Freigabe 5
+	VAR_OUTPUT.FRG5=StellFrg5 & _CFG.X5 ;
+	//Freigabe 6
+	VAR_OUTPUT.FRG6=StellFrg6 & _CFG.X6 ;
+	//Freigabe 7
+	VAR_OUTPUT.FRG7=StellFrg7 & _CFG.X7 ;
+	//Freigabe 8
+	VAR_OUTPUT.FRG8=StellFrg8 & _CFG.X8 ;
+
+	/*
+	Algorytm :
+	1. Inputy bool plus slowo konfiguracyjne
+	2. Slowo konfiguracyjne zamienic na bool aby mieć dostęp do każdego pojedynczo
+	3. Porownac n-ty bool input z n-tym slowem konfiguracyjnym
+	*/
+
+
+
+
+
+
+
+
+	    // typedef u8bits struktura;
+	    // typem jest tablica bool z osmioma elementami
+	    //abc= *(u8bits *)&CFG;
+
+
+	    abc.X1 = 1;
+
+
+
+
+
+
+
+
+	/*
+	 Do funkcji przekazujemy bool-e. Przkeazujemy uint który pokazuje na których bitach wypuszczamy freigabe
+	 Gdy mam bool-e wewnątrz funkcji,
+
+	struct Struktura {
+   int pole1;
+   int pole2;
+   char pole3;
+ };
+
+ struct Struktura zmiennaS;
+
+	zmiennaS.pole1 = 60;    przypisanie liczb do pól
+ zmiennaS.pole2 = 2;
+ zmiennaS.pole3 = 'a';  /* a teraz znaku
+
+
+
+
+
+	 Retrun, nie mogę też zwrócić z funkcji pojedynczej zmiennej
+
+
+
+
+	 PROBLEMY:
+
+	 1. Zwrot struktury slowem return
+	 2. uint8 to struct - moze tutaj bym mial
+
+	*/
+	struct _CFG{
+		bool X0;
+		bool X1;
+		bool X2;
+		bool X3;
+		bool X4;
+		bool X5;
+		bool X6;
+		bool X7;
+		bool X8;
+		bool X9;
+		bool X10;
+		bool X11;
+		bool X12;
+		bool X13;
+		bool X14;
+		bool X15;
+	};
+
+	FRG1
+	FGR2
+	FRG3
+	FRG4
+	FRG5
+	FRG6
+	FRG7
+	FRG8
+
+
+
+
+
+
+
+#define BIT_OFFSET 5
+#define BITMASK  (1 << BIT_OFFSET)
+	// przesuniecie jedynki w lewo o BIT_OFFSET
+
+uint16_t val = 0xAA55;
+if (val & BITMASK)
+{
+/* twoj kod kiedy bit jest aktywny */
+}
+
+
+
+
+
+
+
+
+
+
+	return
+}
