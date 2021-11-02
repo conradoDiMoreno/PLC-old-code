@@ -20,27 +20,7 @@ extern void Rob_StellFRG(bool StellFrg1, bool StellFrg2, bool StellFrg3, bool St
 
 
 
-// static - czy przedrostek static moge dodac do inputow funkcji ?
-
-
-//Sprawdzic jak dziala ifndef i define
-//#ifndef INC_TMO_FB210_ROB_STELLFRG_H_
-//#define INC_TMO_FB210_ROB_STELLFRG_H_
-
-//#endif /* INC_TMO_FB210_ROB_STELLFRG_H_ */
 
 
 
 
-// poczytać o ifndef
-
-//Sprawdz kiedy dajemy <> a kiedy ""
-
-// Po cholere dajemy plik naglowkowy, a potem kod w C. Poczytac o tej praktyce
-
-//W związku z tym, że używamy typów uint8_t, to powinniśmy jeszcze dodać
-//dodac nagłówek stdint.h
-
-// zobacz o przeslaniu CV-ki do Sii na EPLAN
-
-// przypomnij sobie o alias zmiennej C++, zobacz czy w C jest dokladnie tak samo
